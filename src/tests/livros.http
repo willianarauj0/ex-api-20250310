@@ -1,0 +1,13 @@
+@url = https://fuzzy-space-succotash-4qjrr56xrxf7ppp-8080.app.github.dev
+
+GET {{url}}/livros
+
+###
+POST {{url}}/livros
+Content-Type: application/json
+
+{
+    "titulo": "Teste",
+    "generos" : "Aventura",
+    "autores" : "Eu mesmo"
+}
