@@ -3,11 +3,27 @@
 GET {{url}}/livros
 
 ###
+GET {{url}}/livros/3
+
+###
 POST {{url}}/livros
 Content-Type: application/json
 
 {
-    "titulo": "Teste",
-    "generos" : "Aventura",
-    "autores" : "Eu mesmo"
+    "titulo": "Teste Noto",
+    "generos" : "Romance",
+    "autores" : "Fulano de Tal"
 }
+
+###
+PUT {{url}}/livros/1
+Content-Type: application/json
+
+{
+    "titulo": "Livro Alterado",
+    "generos" : "Genero Alterado",
+    "autores" : "Autor Alterado"
+}
+
+###
+DELETE {{url}}/livros/4
