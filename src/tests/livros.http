@@ -1,4 +1,4 @@
-@url = https://fuzzy-space-succotash-4qjrr56xrxf7ppp-8080.app.github.dev
+@url = https://ubiquitous-enigma-rqwjprp9qxw2p4x4-8080.app.github.dev
 
 GET {{url}}/livros
 
@@ -11,3 +11,6 @@ Content-Type: application/json
     "generos" : "Aventura",
     "autores" : "Eu mesmo"
 }
+
+###
+DELETE {{url}}/livros/8
