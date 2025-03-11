@@ -13,4 +13,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{url}}/livros/8
+DELETE {{url}}/livros/
