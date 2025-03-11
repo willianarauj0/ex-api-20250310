@@ -10,20 +10,20 @@ POST {{url}}/livros
 Content-Type: application/json
 
 {
-    "titulo": "Teste Noto",
+    "titulo": "Teste Teste Teste",
     "generos" : "Romance",
     "autores" : "Fulano de Tal"
 }
 
 ###
-PUT {{url}}/livros/1
+PUT {{url}}/livros/5
 Content-Type: application/json
 
 {
-    "titulo": "Livro Alterado",
+    "titulo": "Livro 5 Alterado",
     "generos" : "Genero Alterado",
     "autores" : "Autor Alterado"
 }
 
 ###
-DELETE {{url}}/livros/4
+DELETE {{url}}/livros/5
