@@ -1,6 +1,8 @@
-@url = https://ubiquitous-enigma-rqwjprp9qxw2p4x4-8080.app.github.dev
+@url = https://laughing-couscous-rqwjprp9jpgc6v6-8080.app.github.dev
 
 GET {{url}}/livros
+
+
 
 ###
 POST {{url}}/livros
@@ -8,7 +10,7 @@ Content-Type: application/json
 
 {
     "titulo": "Teste",
-    "generos" : "Aventura",
+    "genero" : {"id" : 1},
     "autores" : "Eu mesmo"
 }
 

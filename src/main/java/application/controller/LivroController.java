@@ -9,6 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import application.model.Livro;
 import application.record.LivroDTO;
+import application.record.LivroinsertDTO;
 import application.repository.LivroRepository;
 import application.service.LivroService;
 
@@ -27,7 +28,7 @@ public class LivroController {
     }
 
     @PostMapping
-    public LivroDTO insert(@RequestBody LivroDTO livro) {
+    public LivroDTO insert(@RequestBody LivroinsertDTO livro) {
         return this.livroService.insert(livro);
     }
 
