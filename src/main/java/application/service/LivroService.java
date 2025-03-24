@@ -9,6 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import application.model.Livro;
 import application.record.LivroDTO;
+import application.record.LivroInsertDTO;
 import application.repository.LivroRepository;
 
 @Service
@@ -30,7 +31,7 @@ public class LivroService {
         return new LivroDTO(resultado.get());
     }
 
-    public LivroDTO insert(LivroDTO livro) {
+    public LivroDTO insert(LivroInsertDTO livro) {
         Livro newLivro = new Livro(livro);
         Livro savedLivro = livroRepo.save(newLivro);
         LivroDTO response = new LivroDTO(savedLivro);
@@ -47,7 +48,7 @@ public class LivroService {
         }
 
         resultado.get().setTitulo(livro.titulo());
-        resultado.get().setGeneros(livro.generos());
+        // resultado.get().setGeneros(livro.generos());
         resultado.get().setAutores(livro.autores());
 
         return new LivroDTO(livroRepo.save(resultado.get()));

@@ -10,39 +10,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import application.record.LivroDTO;
-import application.record.LivroInsertDTO;
-import application.service.LivroService;
+import application.record.GeneroDTO;
+import application.service.GeneroService;
 
 @RestController
-@RequestMapping("/livros")
-public class LivroController {
-
+@RequestMapping("/generos")
+public class GeneroController {
     @Autowired
-    private LivroService livroService;
+    private GeneroService generoService;
 
     @GetMapping
-    public Iterable<LivroDTO> list() {
-        return livroService.getAll();
+    public Iterable<GeneroDTO> list() {
+        return generoService.getAll();
     }
 
     @GetMapping("/{id}")
-    public LivroDTO getOne(@PathVariable long id) {
-        return livroService.getOne(id);
+    public GeneroDTO findOne(@PathVariable long id) {
+        return generoService.getOne(id);
     }
 
     @PostMapping
-    public LivroDTO insert(@RequestBody LivroInsertDTO livro) {
-        return livroService.insert(livro);
+    public GeneroDTO insert(@RequestBody GeneroDTO genero) {
+        return generoService.insert(genero);
     }
 
     @PutMapping("/{id}")
-    public LivroDTO update(@PathVariable long id, @RequestBody LivroDTO livro) {
-        return livroService.update(id, livro);
+    public GeneroDTO update(@PathVariable long id, @RequestBody GeneroDTO genero) {
+        return generoService.update(id, genero);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable long id) {
-        livroService.delete(id);
+        generoService.delete(id);
     }
 }

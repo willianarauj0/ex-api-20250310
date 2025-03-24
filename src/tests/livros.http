@@ -1,4 +1,4 @@
-@url = https://fuzzy-space-succotash-4qjrr56xrxf7ppp-8080.app.github.dev
+@url = https://ominous-halibut-p7j664949pc77w7-8080.app.github.dev
 
 GET {{url}}/livros
 
@@ -10,8 +10,8 @@ POST {{url}}/livros
 Content-Type: application/json
 
 {
-    "titulo": "Teste Teste Teste",
-    "generos" : "Romance",
+    "titulo": "Novo Teste",
+    "id_genero" : 1,
     "autores" : "Fulano de Tal"
 }
 

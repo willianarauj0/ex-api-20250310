@@ -5,14 +5,14 @@ import application.model.Livro;
 public record LivroDTO(
     long id,
     String titulo,
-    String generos,
+    GeneroDTO genero,
     String autores
 ) {
     public LivroDTO(Livro livro) {
         this(
             livro.getId(),
             livro.getTitulo(),
-            livro.getGeneros(),
+            new GeneroDTO(livro.getGenero()),
             livro.getAutores()
         );
     }
