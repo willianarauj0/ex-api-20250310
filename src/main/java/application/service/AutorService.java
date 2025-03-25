@@ -15,5 +15,9 @@ public class AutorService {
     public AutorDTO insert(AutorDTO dados) {
         return new AutorDTO(autorRepo.save(new Autor(dados)));
     }
+
+    public Iterable<AutorDTO> findAll() {
+        return autorRepo.findAll().stream().map(AutorDTO::new).toList();
+    }
     
 }
